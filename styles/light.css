@@ -1,0 +1,151 @@
+* {
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+	font-family: "Segoe UI";
+	font-size: 22px;
+}
+
+QLabel, QPushButton { color: #111111; }
+
+/* Scrollbars */
+QScrollBar:vertical, QScrollBar:horizontal,
+QTextEdit QScrollBar:vertical, QTextEdit QScrollBar:horizontal {
+	background: #E6FFF8;           /* light aquamarine track bg */
+	border-radius: 2px;
+}
+
+QScrollBar:vertical, QTextEdit QScrollBar:vertical {
+	width: 4px;
+	margin: 10px 0;
+}
+
+QScrollBar:horizontal, QTextEdit QScrollBar:horizontal {
+	height: 4px;
+	margin: 0 40px;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal,
+QTextEdit QScrollBar::handle:vertical, QTextEdit QScrollBar::handle:horizontal {
+	background: #8FD8C6;           /* aquamarine handle */
+	border-radius: 2px;
+	min-height: 20px;
+	min-width: 20px;
+}
+
+QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover,
+QTextEdit QScrollBar::handle:vertical:hover, QTextEdit QScrollBar::handle:horizontal:hover {
+	background: #5CC9B5;           /* darker aqua on hover */
+}
+
+QScrollBar::add-line, QScrollBar::sub-line,
+QTextEdit QScrollBar::add-line, QTextEdit QScrollBar::sub-line {
+	background: transparent;
+	width: 0;
+	height: 0;
+}
+
+/* Title / header buttons */
+#appTitleBtn {
+	color: #ffffff;                /* explicitly white text */
+	font-size: 22px;
+	padding: 2px 0 6px 4px;
+}
+
+#appIconBtn:hover { background: #BDEBE2; border-radius: 8px; }
+#appIconBtn:pressed { background: #A4E3D8; border-radius: 8px; }
+
+#appResetBtn { border-radius: 9px; }
+
+#themeBtn:hover, #appMinBtn:hover, #appMaxBtn:hover, 
+#appResetBtn:hover, #mediaPlayerShowBtn:hover, #connectBtn:hover {
+	background: #82a39c;           /* light aqua hover */
+}
+
+#themeBtn:pressed, #appMinBtn:pressed, #appMaxBtn:pressed,
+#appResetBtn:pressed, #mediaPlayerShowBtn:pressed, #connectBtn:pressed {
+	background: #A4E3D8;           /* pressed */
+}
+
+#appCloseBtn:hover, #closeBtn:hover { background: #dd0000; }
+#appCloseBtn:pressed, #closeBtn:pressed { background: #ff0000; }
+
+/* Keep these intact as requested */
+#headerContainer, #footer, #connectionStack {
+	background: #00665f;
+}
+
+#predictionWidget, #outputWidget {
+	background: #F1FFFD;           /* very light aqua panel */
+}
+
+#headerContainer { border-bottom: 1px solid #9ED9CE; }
+#footer { border-top: 1px solid #9ED9CE; }
+
+QScrollArea { border: 1px; }
+
+/* Image preview/button chips */
+#imagePreviewWidget, #imageBtn {
+	margin: 4px;
+	border-radius: 28px;
+	background: #c4e8e1;           /* pill bg */
+}
+
+#imageBtn:hover { background: #D6F8F2; }
+#imageBtn:pressed { background: #C7F1EA; }
+
+#outputWidget QPushButton {
+	font-size: 26px;
+	text-align: center;
+}
+
+#outputWidget QLabel {
+	font-size: 14px;
+	text-align: left;
+}
+
+/* Footer text chips */
+#footer QPushButton { font-size: 11px; }
+
+#footer QLabel {
+	background: #09463c;           /* light chip on dark footer */
+	margin: 3px;
+	color: #004D44;                 /* deep teal text */
+	font-size: 13px;
+	border-radius: 8px;
+	padding: 0 6px 1px 6px;
+}
+
+/* Editors */
+QTextEdit {
+	background: #F7FFFD;           /* light editor bg */
+	color: #111111;
+	font-size: 18px;
+	border: 1px solid #BBDDD6;
+	border-radius: 6px;
+	padding: 6px;
+	selection-background-color: #7FFFD4;  /* aquamarine highlight */
+	selection-color: #000000;
+}
+
+QTextEdit:hover { background: #F2FFFB; }
+QTextEdit:focus { border: 1px solid #20B2AA; background: #F2FFFB; }
+QTextEdit:disabled { background: #CDEEE7; color: #777777; border: 1px solid #BBDDD6; }
+QTextEdit[placeholderText] { color: #6F9E96; }
+
+QLineEdit {
+	background: #F7FFFD;
+	color: #111111;
+	font-size: 18px;
+	border: 1px solid #BBDDD6;
+	border-radius: 6px;
+	padding: 6px;
+	selection-background-color: #7FFFD4;
+	selection-color: #000000;
+}
+
+QLineEdit:hover { background: #F2FFFB; }
+QLineEdit:focus { border: 1px solid #20B2AA; background: #F2FFFB; }
+QLineEdit:disabled { background: #CDEEE7; color: #777777; border: 1px solid #BBDDD6; }
+QLineEdit[placeholderText] { color: #6F9E96; }

@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/cil-arrow-right.png</file>
+    <file>icons/cil-lightbulb.png</file>
+    <file>icons/cil-link.png</file>
+    <file>icons/cil-moon.png</file>
+    <file>icons/cil-reload.png</file>
+    <file>icons/feather.svg</file>
+    <file>icons/icon_close.png</file>
+    <file>icons/icon_maximize.png</file>
+    <file>icons/icon_minimize.png</file>
+  </qresource>
+</RCC>
