@@ -15,22 +15,18 @@ if errorlevel 1 (
 :: Set the virtual environment directory
 set "VENV_DIR=%PROJECT_DIR%venv"
 
-:: Check if the virtual environment directory exists
+:: Check if the virtual environment already exists
 if not exist "%VENV_DIR%\Scripts\python.exe" (
-    echo Virtual environment not found. Running run.bat to create it...
-    call "%PROJECT_DIR%install_dependencies.bat"
-    call "%PROJECT_DIR%run_api.bat"
-    exit /b
+    echo Creating virtual environment...
+    python -m venv "%VENV_DIR%"
 )
 
 :: Activate the virtual environment
 call "%VENV_DIR%\Scripts\activate.bat"
 
-cls
-:: Run the main Python script
-python "%PROJECT_DIR%api_v2.py"
+:: Upgrade pip and install the required packages
+python -m pip install -r "%PROJECT_DIR%requirements.txt"
 
-:: Deactivate the virtual environment
 deactivate
 
 endlocal
